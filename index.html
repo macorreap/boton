@@ -26,35 +26,23 @@
         button:hover {
             background-color: darkred;
         }
-        .footer {
-            margin-top: 10px;
-            text-align: center;
-        }
         .footer-text {
+            margin-top: 10px;
             font-size: 12px;
             color: gray;
             font-family: Arial, sans-serif;
-        }
-        .footer img {
-            margin-top: 5px;
-            width: 50px; /* Ajusta el tamaño de la imagen */
-            height: auto;
         }
     </style>
 </head>
 <body>
     <button onclick="enviarMensaje()">Enviar Alerta</button>
-
-    <div class="footer">
-        <div class="footer-text">Desarrollado por Área de Evangelización</div>
-        <img src="https://www.odb.cl/images/magone/insignia.png" alt="Insignia">
-    </div>
+    <div class="footer-text">Desarrollado por Área de Evangelización</div>
 
     <script>
         function enviarMensaje() {
-            const webhookUrl = "TU_WEBHOOK_URL"; // Reemplaza con tu URL de Webhook
+            const webhookUrl = "https://chat.googleapis.com/v1/spaces/AAAAooD7Mq8/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=3texR83MVxZQl_DrOU2dd3a8REWDPCUyyuZROCFRdxc"; // Reemplaza con tu URL de Webhook
             const mensaje = {
-                text: "🚨 ¡Alerta! Se ha pulsado el botón rojo. 📢\n\n📩 Notificando a:\n- Carolina Alfaro (rector@odb.cl)\n- Mario Correa (coordpastoral2@odb.cl)"
+                text: "🚨 ¡Alerta! Se ha pulsado el botón rojo. 📢\n\n📩 Notificando a:\n- Carolina Alfaro (mario.correa.p@gmail.com)\n- Mario Correa (coordpastoral2@odb.cl)"
             };
 
             fetch(webhookUrl, {
